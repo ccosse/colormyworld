@@ -13,6 +13,8 @@
 
 <link rel="stylesheet" href="static/colormyworld/css/colormyworld.css">
 
+<link rel="prefetch" type="application/l10n" href="static/colormyworld/data/data.ini" />
+<script type="text/javascript" src="static/colormyworld/js/l10n.js"></script>
 <script data-main="js/loader" src="lib/require.js"></script>
 
 <script type="text/javascript">
@@ -50,7 +52,17 @@ window.onorientationchange=window.onload=window.resize=window.onresize=function(
 }
 
 var initialize=function(e){
-	var app_title=['C','o','l','o','r',' ','M','y',' ','W','o','r','l','d','!'];
+	//var app_title=['C','o','l','o','r',' ','M','y',' ','W','o','r','l','d','!'];
+	//	alert(document.webL10n.getLanguage())
+	if(Math.random()>0.5){
+		document.webL10n.setLanguage('en-US')
+	}
+	else{
+		document.webL10n.setLanguage('fr')
+	}
+	alert(document.webL10n.getLanguage())
+	var app_title=String.split(document.webL10n.get('appname'),'');
+
 	var persistent_title_div=document.getElementById("persistent_title_div");
 	html="";
 	for(var tidx=0;tidx<app_title.length;tidx++){
@@ -87,7 +99,7 @@ var initialize=function(e){
 </div>
 
 <script>
-	setTimeout("initialize()",1000);
+setTimeout("initialize()",1000);
 </script>
 
 </body>
