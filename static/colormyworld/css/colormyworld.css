@@ -1,4 +1,8 @@
 @font-face {
 	font-family: 'Mickey';
-	src:url('static/colormyworld/font/mickey.ttf') format('truetype');
+	src:url('../font/mickey.ttf') format('truetype');
+}
+#persistent_title_div{
+	position:absolute;
+	top:15px;
 }
