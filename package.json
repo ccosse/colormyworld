@@ -6,5 +6,6 @@
       "sugar-web": "github:sugarlabs/sugar-web/master",
       "domReady": "github:requirejs/domReady/2.0.1"
     }
-  }
+  },
+  "main":"main.js"
 }
