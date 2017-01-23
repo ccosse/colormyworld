@@ -3,105 +3,37 @@
 
 <head>
 <meta charset="utf-8" />
-<title>ColorMyWorld Activity</title>
+<title>ColorMyWorld</title>
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width"/>
+<link rel="prefetch" type="application/l10n" href="locale.ini" />
 <link rel="stylesheet" media="not screen and (device-width: 1200px) and (device-height: 900px)"
 	href="lib/sugar-web/graphics/css/sugar-96dpi.css">
 <link rel="stylesheet" media="screen and (device-width: 1200px) and (device-height: 900px)"
 	href="lib/sugar-web/graphics/css/sugar-200dpi.css">
 <link rel="stylesheet" href="css/activity.css">
-
-<link rel="stylesheet" href="static/colormyworld/css/colormyworld.css">
-
-<link rel="prefetch" type="application/l10n" href="static/colormyworld/data/data.ini" />
-<script type="text/javascript" src="static/colormyworld/js/l10n.js"></script>
 <script data-main="js/loader" src="lib/require.js"></script>
-
-<script type="text/javascript">
-var mkBrightRGBA=function(){
-	var R_CHANNEL=parseInt(Math.random()*255);
-	var G_CHANNEL=parseInt(Math.random()*255);
-	var B_CHANNEL=parseInt(Math.random()*255);
-
-	if(R_CHANNEL+G_CHANNEL+B_CHANNEL<300){
-		var dice=parseInt(Math.random()*3);
-		if(dice==0)R_CHANNEL=255;
-		else if(dice==1)G_CHANNEL=255;
-		else if(dice==2)B_CHANNEL=255;
-		else{;}
-	}
-
-	var A_CHANNEL=255;
-	var rval="RGBA("+R_CHANNEL+","+G_CHANNEL+","+B_CHANNEL+","+A_CHANNEL+")";
-	return rval;
-}
-
-window.onorientationchange=window.onload=window.resize=window.onresize=function(e){
-	var tb=document.getElementById("main-toolbar");
-	var ptd=document.getElementById("persistent_title_div");
-	ptd.style.left=(parseInt((tb.clientWidth)/2.-ptd.getBoundingClientRect().width/2))+"px";
-	var max_font_size=32;
-	if(tb.clientWidth<500)
-		ptd.style.fontSize="0px";
-	else if(tb.clientWidth<750){
-		var fs=(tb.clientWidth-500)/250*max_font_size;
-		ptd.style.fontSize=fs+"px";
-	}
-	else
-		ptd.style.fontSize=max_font_size+"px";
-}
-
-var initialize=function(e){
-	//var app_title=['C','o','l','o','r',' ','M','y',' ','W','o','r','l','d','!'];
-	//	alert(document.webL10n.getLanguage())
-	if(Math.random()>0.5){
-		document.webL10n.setLanguage('en-US')
-	}
-	else{
-		document.webL10n.setLanguage('fr')
-	}
-	alert(document.webL10n.getLanguage())
-	var app_title=String.split(document.webL10n.get('appname'),'');
-
-	var persistent_title_div=document.getElementById("persistent_title_div");
-	html="";
-	for(var tidx=0;tidx<app_title.length;tidx++){
-		var rand_color=mkBrightRGBA();
-		html+="<span style='text-shadow:none;font-family:Mickey;color:"+rand_color+";'>"+app_title[tidx]+"</span>";
-	}
-	persistent_title_div.innerHTML=html;
-	window.onresize();
-}
-
-</script>
-
 </head>
 
 <body>
 <div id="main-toolbar" class="toolbar">
   <button class="toolbutton" id="activity-button" title="ColorMyWorld Activity"></button>
+	<button class="toolbutton" id="my-button" title="My Button"></button>
+	<div id="persistent_title_div"></div>
 
-  <div id="persistent_title_div"></div>
   <!-- Add more buttons here -->
 
   <!-- Buttons with class="pull-right" will be right aligned -->
-  <button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+
+	<button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
 </div>
 
 <!-- The content of your activity goes inside the canvas -->
 <div id="canvas">
 
   <!-- Replace this message with your own content -->
-  <h1>Congratulations!</h1>
-  <p>You are ready to develop this activity. Go ahead and edit the files.<br />
-    You can remove this message in the index.html.</p>
+	<div id="cmw_bg"></div>
 
 </div>
-
-<script>
-setTimeout("initialize()",1000);
-</script>
-
 </body>
 
 </html>
