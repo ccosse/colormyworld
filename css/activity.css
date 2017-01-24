@@ -4,6 +4,9 @@
 #my-button {
   background-image: url(../icons/red_smiley.svg);
 }
+#run-button {
+  background-image: url(../icons/red_smiley.svg);
+}
 @font-face {
         font-family: 'Mickey';
         src:url('../font/mickey.ttf') format('truetype');
@@ -16,4 +19,12 @@
 	width:100%;
 	height:100%;
 	background-color:rgba(0,0,255,.3);
+}
+#popup{
+	background:#333333;
+	color:lightgreen;
+	border:3px solid;
+	border-radius:10px;
+	position:absolute;
+	text-align:center;
 }

@@ -24,5 +24,12 @@ define([
 		    print("You clicked me!");
 				colormyworld.change_areaCB();
 		}
+
+		var runButton = document.getElementById("run-button");
+		runButton.onclick = function () {
+		    print("Run!");
+				colormyworld.startMove();
+		}
+
 	});
 });
