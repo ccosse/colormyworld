@@ -14,6 +14,8 @@ define([
 		activity.setup();
 		print(colormyworld.test());
 		print(map.test());
+		map.setup_map();
+		colormyworld.change_areaCB();
 
 //		document.getElementById("cmw_bg").innerHTML="<h1>ColorMyWorld</h1>";
 
