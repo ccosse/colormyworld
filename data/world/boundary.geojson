@@ -5,7 +5,7 @@
         "AREA": 9999,
         "ymax": 80, "xmax": -180, "xmin": -180, "ymin": -80,
         "POP2005": 9999,
-        "color":"#ff0",
+        "color":"rgba(0,0,0,0)",
         "fill":"rgba(0,255,0,0.1)",
         "width":0
     },
