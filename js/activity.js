@@ -3,7 +3,7 @@ define([
 		"messages","print",
 		"activity/jquery-1.11.2.min",
 		"activity/ol",
-		"config","colormyworld","map"
+		"config","colormyworld","map",
 	],
 	function (activity,messages,print,jquery,ol,config,colormyworld,map){
 
@@ -22,6 +22,7 @@ define([
 		var myButton = document.getElementById("my-button");
 		myButton.onclick = function () {
 		    print("You clicked me!");
+				colormyworld.change_areaCB();
 		}
 	});
 });
