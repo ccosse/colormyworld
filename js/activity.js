@@ -63,7 +63,9 @@ define([
 		var runButton = document.getElementById("run-button");
 		runButton.onclick = function () {
 		    print("Run!");
-				colormyworld.startMove();
+//				colormyworld.startMove();
+				$(".control_panel").toggleClass("show");
+				print("toggled");
 		}
 
 	});

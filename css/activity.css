@@ -31,3 +31,20 @@
 	position:absolute;
 	text-align:center;
 }
+.control_panel{
+	position:fixed;
+	height: 200px;
+	width: 150px;
+	left: -100%;
+	z-index: 10;
+	background-color:#333333;
+	color:white;
+	-webkit-transition: left 0.75s ease;
+	transition: left 0.75s ease;
+	opacity:0.9;
+	text-align:center;
+	overflow:auto;
+}
+.control_panel.show{
+	left: 0;
+}
