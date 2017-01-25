@@ -2,10 +2,10 @@
   background-image: url(../activity/activity-icon.svg);
 }
 #my-button {
-  background-image: url(../icons/red_smiley.svg);
+	background-image: url(../activity/activity-icon.svg);
 }
 #run-button {
-  background-image: url(../icons/red_smiley.svg);
+	background-image: url(../activity/activity-icon.svg);
 }
 @font-face {
         font-family: 'Mickey';
