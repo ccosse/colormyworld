@@ -1,0 +1,16 @@
+{
+	"type": "Feature",
+	"properties": {
+		"NAME": "Test",
+		"AREA": 0,
+		"ymax": 71, "xmax": 41, "xmin": -32, "ymin": 27,
+		"POP2005": 0,
+		"color":"rgba(0,0,0,0.)",
+		"fill":"rgba(0,0,0,0.)",
+		"width":2
+	},
+	"crs": {"type": "EPSG", "properties": {"code": "4326"}},
+	"totalFeatures": 1,
+	"type": "Feature",
+	"geometry": {"type": "MultiPolygon", "coordinates": [[[[-32,27],[-32,71],[41,71],[41,27],[-32,27]]]]}
+}

@@ -20,6 +20,7 @@ define([
 
 		document.webL10n.setLanguage('fr');
 		print(document.webL10n.getLanguage());
+		print(document.webL10n.get('France'));
 
 		var updateTitle=window.onresize=function(){
 			var app_title=String.split(document.webL10n.get('appname'),'');
