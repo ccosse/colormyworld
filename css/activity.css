@@ -4,6 +4,9 @@
 #select-language-button {
 	background-image: url(../activity/activity-icon.svg);
 }
+#select-region-button {
+	background-image: url(../activity/activity-icon.svg);
+}
 #run-button {
 	background-image: url(../activity/activity-icon.svg);
 }

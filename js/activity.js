@@ -16,7 +16,7 @@ define([
 		print(colormyworld.test());
 		print(map.test());
 		map.setup_map();
-		colormyworld.change_areaCB();
+		colormyworld.change_areaCB(INSTALLED['keys'][0]);
 		window.onresize=util.updateTitle;
 		document.webL10n.setLanguage('en-US');
 		print(document.webL10n.getLanguage());
@@ -32,11 +32,10 @@ define([
 			persistent_title_div.innerHTML=html;
 			util.resize();
 		}
-
 		window.setTimeout(updateTitle,1000);
 
-		var myButton = document.getElementById("select-language-button");
-		myButton.onclick = function () {
+		var languageButton = document.getElementById("select-language-button");
+		languageButton.onclick = function () {
 			var supported_languages=['en-us','fr','es','de','sw','gr','th','cn','it'];
 			print(document.webL10n.getLanguage());
 			var lang_idx=supported_languages.indexOf(document.webL10n.getLanguage());
@@ -47,7 +46,18 @@ define([
 			print(document.webL10n.getLanguage());
 			//colormyworld.change_areaCB();
 			window.setTimeout(updateTitle,1000);
-
+		}
+		var regionButton = document.getElementById("select-region-button");
+		regionButton.onclick = function () {
+			print(colormyworld.current);
+			var region_idx=INSTALLED['keys'].indexOf(colormyworld.current);
+			print(region_idx);
+			region_idx+=1;
+			print(region_idx);
+			if(region_idx>INSTALLED['keys'].length-1)region_idx=0;
+			region=INSTALLED['keys'][region_idx];
+			print("colormyworld.current="+region);
+			colormyworld.change_areaCB(region);
 		}
 
 		var runButton = document.getElementById("run-button");
