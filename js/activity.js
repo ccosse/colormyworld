@@ -17,8 +17,8 @@ define([
 		print(map.test());
 		map.setup_map();
 		colormyworld.change_areaCB();
-
-		document.webL10n.setLanguage('sw');
+		window.onresize=util.updateTitle;
+		document.webL10n.setLanguage('en-US');
 		print(document.webL10n.getLanguage());
 
 		var updateTitle=window.onresize=function(){
@@ -32,12 +32,22 @@ define([
 			persistent_title_div.innerHTML=html;
 			util.resize();
 		}
+
 		window.setTimeout(updateTitle,1000);
 
-		var myButton = document.getElementById("my-button");
+		var myButton = document.getElementById("select-language-button");
 		myButton.onclick = function () {
-		    print("You clicked me!");
-				colormyworld.change_areaCB();
+			var supported_languages=['en-us','fr','es','de','sw','gr','th','cn','it'];
+			print(document.webL10n.getLanguage());
+			var lang_idx=supported_languages.indexOf(document.webL10n.getLanguage());
+			print(lang_idx);
+			lang_idx+=1;
+			if(lang_idx>supported_languages.length-1)lang_idx=0;
+			document.webL10n.setLanguage(supported_languages[lang_idx]);
+			print(document.webL10n.getLanguage());
+			//colormyworld.change_areaCB();
+			window.setTimeout(updateTitle,1000);
+
 		}
 
 		var runButton = document.getElementById("run-button");
