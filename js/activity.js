@@ -18,9 +18,8 @@ define([
 		map.setup_map();
 		colormyworld.change_areaCB();
 
-		document.webL10n.setLanguage('fr');
+		document.webL10n.setLanguage('es');
 		print(document.webL10n.getLanguage());
-		print(document.webL10n.get('France'));
 
 		var updateTitle=window.onresize=function(){
 			var app_title=String.split(document.webL10n.get('appname'),'');
