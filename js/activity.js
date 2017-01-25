@@ -18,7 +18,7 @@ define([
 		map.setup_map();
 		colormyworld.change_areaCB();
 
-		document.webL10n.setLanguage('es');
+		document.webL10n.setLanguage('sw');
 		print(document.webL10n.getLanguage());
 
 		var updateTitle=window.onresize=function(){
