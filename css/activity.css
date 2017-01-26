@@ -15,6 +15,10 @@
 	background-image: url(../activity/activity-icon.svg);
 	z-index:3;
 }
+#tour-button {
+	background-image: url(../activity/activity-icon.svg);
+	z-index:3;
+}
 @font-face {
         font-family: 'Mickey';
         src:url('../font/mickey.ttf') format('truetype');
@@ -53,4 +57,7 @@
 }
 .control_panel.show{
 	top: 55px;
+}
+.tour-div{
+	color:white;
 }

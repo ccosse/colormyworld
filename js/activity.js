@@ -28,6 +28,7 @@ define([
 		print(document.webL10n.getLanguage());
 
 		var updateTitle=window.onresize=function(){
+			util.resize();
 			var app_title=String.split(document.webL10n.get('appname'),'');
 			var persistent_title_div=document.getElementById("persistent_title_div");
 			html="";
@@ -36,7 +37,7 @@ define([
 				html+="<span style='text-shadow:none;font-family:Mickey;color:"+rand_color+";'>"+app_title[tidx]+"</span>";
 			}
 			persistent_title_div.innerHTML=html;
-			util.resize();
+
 		}
 		window.setTimeout(updateTitle,1000);
 
@@ -70,6 +71,18 @@ define([
 		runButton.onclick = function () {
 		    print("Run!");
 				colormyworld.startMove();
+//				$(".control_panel").toggleClass("show");
+		}
+		var tourButton = document.getElementById("tour-button");
+		tourButton.onclick = function () {
+		    if(colormyworld.getTour()==true){
+					colormyworld.setTour(false);
+					tourButton.title="Tour:OFF"
+				}
+				else{
+					colormyworld.setTour(true);
+					tourButton.title="Tour:ON"
+				}
 //				$(".control_panel").toggleClass("show");
 		}
 
