@@ -4,15 +4,21 @@ define([
 		"activity/jquery-1.11.2.min",
 		"activity/ol",
 		"activity/l10n",
-		"config","colormyworld","map","util"
+		"config","colormyworld","map","util","languagepalette"
 	],
-	function (activity,messages,print,jquery,ol,l10n,config,colormyworld,map,util){
+	function (activity,messages,print,jquery,ol,l10n,config,colormyworld,map,util,languagepalette){
 
 	// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
 
 		// Initialize the activity.
 		activity.setup();
+/*
+//Was copying from SpeakActivity ... but taking shortcut now ... just cycle as built
+		var datastoreObject = activity.getDatastoreObject();
+		var languageButton = document.getElementById("select-language-button");
+		var languagePalette = new languagepalette.ActivityPalette(languageButton, datastoreObject);
+*/
 		print(colormyworld.test());
 		print(map.test());
 		map.setup_map();
@@ -63,9 +69,8 @@ define([
 		var runButton = document.getElementById("run-button");
 		runButton.onclick = function () {
 		    print("Run!");
-//				colormyworld.startMove();
-				$(".control_panel").toggleClass("show");
-				print("toggled");
+				colormyworld.startMove();
+//				$(".control_panel").toggleClass("show");
 		}
 
 	});
