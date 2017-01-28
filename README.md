@@ -1,2 +1,2 @@
 # colormyworld
-GIS Scavenger Hunt
+Geography Scavenger Hunt
