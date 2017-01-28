@@ -24,7 +24,10 @@ a {
 /* Toolbar */
 .toolbar {
   height: 55px;
-  padding: 0 57px;
+  padding-top: 0;
+	padding-right: 57px;
+	padding-left: 10px;
+	padding-bottom: 0;
   color: white;
   background-color: #282828;
   -webkit-user-select: none;

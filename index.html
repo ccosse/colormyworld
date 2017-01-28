@@ -23,10 +23,7 @@
 -->
 <div id="main-toolbar" class="toolbar">
   <button class="toolbutton" id="activity-button" title="ColorMyWorld Activity"></button>
-	<button class="toolbutton" id="select-region-button" title="Select Region"></button>
-	<button class="toolbutton" id="select-language-button" title="Select Language"></button>
 	<button class="toolbutton" id="run-button" title="Play"></button>
-	<button class="toolbutton" id="tour-button" title="Tour:ON"></button>
 
 	<div id="persistent_title_div"></div>
 
@@ -35,6 +32,32 @@
   <!-- Buttons with class="pull-right" will be right aligned -->
 
 	<button class="toolbutton pull-right" id="stop-button" title="Stop"></button>
+</div>
+
+
+<div id="control_panel" class="control_panel">
+	<div id="tb" class="tb">
+		<img id="tb_arrow" src="img/arrow-lt.png" class="tb_arrow"/>
+	</div>
+
+	<table width="100%">
+	<tr><td class="cpcell">
+	<div class="cpbutton" id="select-language-button" title="Select Language"></div>
+	</td><td>
+	<div class="cplabel" id="select-language-label">English</div>
+	</td></tr>
+	<tr><td class="cpcell">
+	<div class="cpbutton" id="select-mode-button" title="Select Mode"></div>
+	</td><td>
+	<div class="cplabel" id="select-mode-label">Mode: Tour</div>
+	</td></tr>
+	<tr><td class="cpcell">
+	<div class="cpbutton" id="select-region-button" title="Select Region"></div>
+	</td><td>
+	<div class="cplabel" id="select-region-label">Region: Africa</div>
+	</td></tr>
+	</table>
+
 </div>
 
 <!-- The content of your activity goes inside the canvas -->
