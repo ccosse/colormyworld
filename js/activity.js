@@ -5,9 +5,9 @@ define([
 		"activity/ol",
 		"activity/hammer.min",
 		"activity/l10n",
-		"config","colormyworld","map","util","languagepalette"
+		"config","colormyworld","map","roll_up_div","util","languagepalette"
 	],
-	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,util,languagepalette){
+	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette){
 
 	// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
@@ -23,7 +23,7 @@ define([
 		print(colormyworld.test());
 		print(map.test());
 		map.setup_map();
-		colormyworld.change_areaCB(INSTALLED['keys'][0]);
+//		colormyworld.change_areaCB(1,INSTALLED['keys'][0]);
 		window.onresize=util.updateTitle;
 		document.webL10n.setLanguage('en-US');
 		print(document.webL10n.getLanguage());
@@ -68,6 +68,7 @@ define([
 			languageLabel.innerHTML=supported_languages[supported_languages['keys'][lang_idx]];
 			window.setTimeout(updateTitle,1000);
 		}
+/*
 		var regionButton = document.getElementById("select-region-button");
 		var regionLabel = document.getElementById("select-region-label");
 		regionButton.onclick = function () {
@@ -80,9 +81,9 @@ define([
 			region=INSTALLED['keys'][region_idx];
 			print("colormyworld.current="+region);
 			regionLabel.innerHTML="Region: "+region;
-			colormyworld.change_areaCB(region);
+			colormyworld.change_areaCB(1,region);//keep adding/updating
 		}
-
+*/
 		var runButton = document.getElementById("run-button");
 		runButton.onclick = function () {
 			if(colormyworld.getRunning()==true){
@@ -119,6 +120,114 @@ define([
 			print("tb clicked");
 			$("#control_panel").toggleClass("hhide");
 		});
+
+
+		var layer_checkboxCB=function(e){
+			if(true)console.log(e.target.id);
+			var img=e.target;
+			var category=e.target.id.split("_")[0];
+			category=category.replace("ZZZ"," ");
+			var layer_name=e.target.id.split("_")[1];
+			layer_name=layer_name.replace("ZZZ"," ");
+
+			if(util.get_basename(img.src)=="checkbox-0.png"){
+				img.src="img/checkbox-1.png";
+				if(category=="Base Layers"){
+					print("Base Layer");
+					//window.map.getLayers().insertAt(0, window.app.CATEGORIES[category][layer_name]['layer']);
+					//window.app.CATEGORIES[category][layer_name]['toggle']=true;
+					colormyworld.change_areaCB(true,layer_name);
+				}
+				else{
+					print("Non Base Layer");
+					//window.map.addLayer(window.app.CATEGORIES[category][layer_name]['layer']);
+					//window.app.CATEGORIES[category][layer_name]['toggle']=true;
+					colormyworld.change_areaCB(true,layer_name);
+				}
+			}
+			else{
+				print("removing ..."+e.target.id);
+				print(category);
+				print(layer_name);
+				img.src="img/checkbox-0.png";
+				colormyworld.change_areaCB(false,layer_name);
+			}
+		}
+		var make_layer_row=function(category,layer_name){
+			if(true)console.log("make_layer_row: "+category+"."+layer_name);
+			var rdiv=document.createElement("div");
+			var rtab=document.createElement("table");
+			rtab.className="layer_table";
+			var rrtab=rtab.insertRow(-1);
+			var crtab=rrtab.insertCell(-1);
+
+			var layer_label=document.createElement("div");
+			layer_label.innerHTML=layer_name;
+			layer_label.className="layer_label";
+			var id=layer_name+parseInt(1E9*Math.random()).toString();
+			layer_label.id=id;
+			crtab.className="layer_cell";
+			crtab.appendChild(layer_label);
+
+			var crtab=rrtab.insertCell(-1);
+			crtab.className="icon_cell";
+			var idn=category.replace("_"," ")+"_"+layer_name+"_"+parseInt(1E9*Math.random());
+			if(true)console.log("idn="+idn);
+			var img=new Image();
+			img.id=idn;
+			img.className="icon";
+
+			var toggle=false;
+			toggle=INSTALLED[layer_name]['toggle'];
+			if(toggle){
+				img.src="img/checkbox-1.png";
+				colormyworld.change_areaCB(true,layer_name);
+			}
+			else
+				img.src="img/checkbox-0.png";
+
+			crtab.appendChild(img);
+			img.addEventListener("click",layer_checkboxCB,false);
+
+			var crtab=rrtab.insertCell(-1);
+			crtab.className="icon_cell";
+			var idn=category+"_"+layer_name+"_hamburger_"+parseInt(1E9*Math.random());
+			var img=new Image();
+			img.id=idn;
+			img.className="icon";
+			img.src="img/interface-1.png";
+			crtab.appendChild(img);
+//			img.addEventListener("click",me.popoutCB,false);
+
+
+			rdiv.appendChild(rtab);
+			return rdiv;
+		}
+
+		$("#control_panel").append(util.make_hr("hr0"));
+		var category="Regions";
+		var opts={
+			'category':category,
+			'parent_id':'control_panel',
+			'id':category.replace("_"," "),
+			'className':'roll_up_div',
+			'roll_up_class':'rollup',
+			'roll_up_name':category.replace("_"," "),
+			'arrow_img':'img/arrow.png',
+			'roll_up_icon_src':'img/arrow.png',
+		};
+		var rollup=new RollUpDiv(opts);
+		var lt=document.createElement("table");//lt=LayersTable
+		lt.className="layer_table";
+		var layer_names=INSTALLED['keys'];
+		for(var lidx=0;lidx<layer_names.length;lidx++){
+			var layer_name=layer_names[lidx];
+			var r=lt.insertRow(-1);
+			var c=r.insertCell(-1);
+			c.appendChild(make_layer_row(category,layer_name));
+		}
+		rollup.rollup.appendChild(lt);
+		$("#control_panel").append(util.make_hr("hr1"));
 
 	});
 });
