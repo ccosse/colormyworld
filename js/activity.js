@@ -38,11 +38,6 @@ define([
 			}
 			persistent_title_div.innerHTML=html;
 			util.resize();
-
-			print(util.enscore("You Finished"));
-			print(util.descore(document.webL10n.get(util.enscore("You Finished"))));
-//			print(util.descore(document.webL10n.get('You_Finished')));
-
 		}
 		window.setTimeout(updateTitle,1000);
 
