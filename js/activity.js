@@ -39,6 +39,10 @@ define([
 			persistent_title_div.innerHTML=html;
 			util.resize();
 
+			print(util.enscore("You Finished"));
+			print(util.descore(document.webL10n.get(util.enscore("You Finished"))));
+//			print(util.descore(document.webL10n.get('You_Finished')));
+
 		}
 		window.setTimeout(updateTitle,1000);
 
@@ -86,20 +90,7 @@ define([
 */
 		var runButton = document.getElementById("run-button");
 		runButton.onclick = function () {
-			if(colormyworld.getRunning()==true){
-				print("stopMove");
-				colormyworld.setRunning(false);
-				$("#run-button").toggleClass("running");
-				$("#run-button").title="Play";
-			}
-			else{
-				print("startMove");
-				colormyworld.setRunning(true);
-				colormyworld.startMove();
-				$("#run-button").toggleClass("running");
-				$("#run-button").title="Pause";
-			}
-//				$(".control_panel").toggleClass("show");
+			colormyworld.toggleRunning();
 		}
 		var modeButton = document.getElementById("select-mode-button");
 		var modeLabel = document.getElementById("select-mode-label");
