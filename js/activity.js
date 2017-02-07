@@ -4,7 +4,7 @@ define([
 		"activity/jquery-1.11.2.min",
 		"activity/ol",
 		"activity/hammer.min",
-		"activity/l10n",
+		"l10n/l10n",
 		"config","colormyworld","map","roll_up_div","util","languagepalette"
 	],
 	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette){
@@ -25,11 +25,10 @@ define([
 		map.setup_map();
 //		colormyworld.change_areaCB(1,INSTALLED['keys'][0]);
 		window.onresize=util.updateTitle;
-		document.webL10n.setLanguage('en-US');
 		print(document.webL10n.getLanguage());
 
 		var updateTitle=window.onresize=function(){
-			var app_title=String.split(document.webL10n.get('appname'),'');
+			var app_title=document.webL10n.get('appname').split();
 			var persistent_title_div=document.getElementById("persistent_title_div");
 			html="";
 			for(var tidx=0;tidx<app_title.length;tidx++){
@@ -41,32 +40,6 @@ define([
 		}
 		window.setTimeout(updateTitle,1000);
 
-		var languageButton = document.getElementById("select-language-button");
-		var languageLabel = document.getElementById("select-language-label");
-		languageButton.onclick = function () {
-			var supported_languages={
-				'keys':['en-us','fr','es','it','de','sw','gr','th','cn'],
-				'en-us':'English',
-				'fr':'French',
-				'es':'Spanish',
-				'it':'Italian',
-				'de':'German',
-				'sw':'Swahili',
-				'gr':'Greek',
-				'th':'Thai',
-				'cn':'Chinese'
-			};
-			print(document.webL10n.getLanguage());
-			var lang_idx=supported_languages['keys'].indexOf(document.webL10n.getLanguage());
-			print(lang_idx);
-			lang_idx+=1;
-			if(lang_idx>supported_languages['keys'].length-1)lang_idx=0;
-			document.webL10n.setLanguage(supported_languages['keys'][lang_idx]);
-			print(document.webL10n.getLanguage());
-			//colormyworld.change_areaCB();
-			languageLabel.innerHTML=supported_languages[supported_languages['keys'][lang_idx]];
-			window.setTimeout(updateTitle,1000);
-		}
 /*
 		var regionButton = document.getElementById("select-region-button");
 		var regionLabel = document.getElementById("select-region-label");
