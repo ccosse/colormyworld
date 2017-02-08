@@ -12,7 +12,7 @@ requirejs.config({
 
 //application logic goes in ../js/activity.js
 requirejs(["activity/activity"]);
-
+/*
 requirejs(["l10n/l10n","sugar-web/env","sugar-web/datastore"], function(l10n, env, datastore) {
 	l10n_s = document.webL10n; //global declaration of translate interface
 
@@ -36,3 +36,4 @@ requirejs(["l10n/l10n","sugar-web/env","sugar-web/datastore"], function(l10n, en
 		callback(loadedSettings);
 	}
 });
+*/
