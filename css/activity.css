@@ -20,6 +20,55 @@
 	background-image: url(../img/pause.png);
 	title:'pause';
 }
+.filterpalette {
+	z-index: 20;
+}
+#main-toolbar #filter-button {
+  background-image: url(../icons/filter.svg);
+}
+#world-button {
+	background-image:url(../icons/world.svg);
+}
+#northamerica-button {
+	background-image: url(../icons/northamerica.svg);
+}
+#southamerica-button {
+	background-image: url(../icons/southamerica.svg);
+}
+#europe-button {
+	background-image: url(../icons/europe.svg);
+}
+#africa-button {
+	background-image: url(../icons/africa.svg);
+}
+#asia-button {
+	background-image: url(../icons/asia.svg);
+}
+#australia-button {
+	background-image: url(../icons/australia.svg);
+}
+
+.palette-button {
+	width: 110px;
+	height: 52px;
+	margin: 4px 22px;
+	color: transparent;
+	background-color: transparent;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 59px;
+	border: 0;
+	border-radius: 5.5px;
+	display: block;
+}
+
+.palette-button-notselected {
+	background-color: transparent;
+}
+
+.palette-button-selected {
+	background-color: #9c9a9c;
+}
 #select-mode-button {
 	background-image: url(../activity/activity-icon.svg);
 	z-index:3;

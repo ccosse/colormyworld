@@ -5,9 +5,9 @@ define([
 		"activity/ol",
 		"activity/hammer.min",
 		"l10n/l10n",
-		"config","colormyworld","map","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette"
+		"config","colormyworld","map","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette"
 	],
-	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette,colorpalette){
+	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette,colorpalette,filterpalette){
 
 	// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
@@ -65,6 +65,13 @@ define([
 		changeColorPalette.setColor('rgb(0, 0, 255)'); // Initial color
 		changeColorPalette.addEventListener('colorChange', function(e) {
 			console.log(e.detail.color); // New color selected
+		});
+		var filterButton = document.getElementById("filter-button");
+		filterpalette = new filterpalette.FilterPalette(filterButton, undefined);
+		filterpalette.addEventListener('filter', function() {
+			console.log(filterpalette.getFilter());
+			// USE: filterpalette.setFilter('europe'); TO CHANGE CURRENT SELECTION
+			filterpalette.popDown();
 		});
 
 		var modeButton = document.getElementById("select-mode-button");
