@@ -5,9 +5,9 @@ define([
 		"activity/ol",
 		"activity/hammer.min",
 		"l10n/l10n",
-		"config","colormyworld","map","roll_up_div","util","languagepalette"
+		"config","colormyworld","map","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette"
 	],
-	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette){
+	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette,colorpalette){
 
 	// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
@@ -60,6 +60,13 @@ define([
 		runButton.onclick = function () {
 			colormyworld.toggleRunning();
 		}
+		var colorButton = document.getElementById("color-button");
+		var changeColorPalette = new colorpalette.ColorPalette(colorButton);
+		changeColorPalette.setColor('rgb(0, 0, 255)'); // Initial color
+		changeColorPalette.addEventListener('colorChange', function(e) {
+			console.log(e.detail.color); // New color selected
+		});
+
 		var modeButton = document.getElementById("select-mode-button");
 		var modeLabel = document.getElementById("select-mode-label");
 		modeButton.onclick = function () {
