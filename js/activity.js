@@ -5,9 +5,9 @@ define([
 		"activity/ol",
 		"activity/hammer.min",
 		"l10n/l10n",
-		"config","colormyworld","map","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette"
+		"config","colormyworld","map","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette","modepalette"
 	],
-	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette,colorpalette,filterpalette){
+	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette,colorpalette,filterpalette,modepalette){
 
 	// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
@@ -75,6 +75,29 @@ define([
 			filterpalette.popDown();
 		});
 
+		var modeButton = document.getElementById("mode-button");
+		modepalette = new modepalette.ModePalette(modeButton, undefined);
+		modepalette.addEventListener('mode', function() {
+			console.log(modepalette.getMode());
+			if(modepalette.getMode()=="Tour"){
+				console.log("Mode: Tour");
+				colormyworld.setTour(true);
+			}
+			else if(modepalette.getMode()=="Interactive"){
+				console.log("Mode: Interactive");
+				colormyworld.setTour(false);
+			}
+			else if(modepalette.getMode()=="Coloring"){
+				console.log("Mode: Coloring");
+				colormyworld.setTour(false);
+			}
+			else{
+				console.log("Mode: Unknown");
+			}
+			// USE: modepalette.setMode('tour'); TO CHANGE CURRENT SELECTION
+			modepalette.popDown();
+		});
+/*
 		var modeButton = document.getElementById("select-mode-button");
 		var modeLabel = document.getElementById("select-mode-label");
 		modeButton.onclick = function () {
@@ -90,15 +113,15 @@ define([
 				}
 //				$(".control_panel").toggleClass("show");
 		}
-
+*/
 		filterpalette.setFilter('Africa');
+		modepalette.setMode('Tour');
 		colormyworld.change_areaCB(true,'Africa');
 
 		$("#tb").click(function(e){
 			print("tb clicked");
 			$("#control_panel").toggleClass("hhide");
 		});
-
 /*
 		var layer_checkboxCB=function(e){
 			if(true)console.log(e.target.id);

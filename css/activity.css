@@ -20,6 +20,24 @@
 	background-image: url(../img/pause.png);
 	title:'pause';
 }
+
+.modepalette {
+	z-index: 20;
+}
+#main-toolbar #mode-button {
+  background-image: url(../activity/activity-icon.svg);
+}
+#coloring-button {
+	background-image:url(../activity/activity-icon.svg);
+}
+#tour-button {
+	background-image: url(../activity/activity-icon.svg);
+}
+#interactive-button {
+	background-image: url(../activity/activity-icon.svg);
+}
+
+
 .filterpalette {
 	z-index: 20;
 }
