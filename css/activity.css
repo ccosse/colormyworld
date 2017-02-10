@@ -24,7 +24,7 @@
 	z-index: 20;
 }
 #main-toolbar #filter-button {
-  background-image: url(../icons/filter.svg);
+  background-image: url(../activity/activity-icon.svg);
 }
 #world-button {
 	background-image:url(../icons/world.svg);

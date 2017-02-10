@@ -28,7 +28,7 @@ define([
 		print(document.webL10n.getLanguage());
 
 		var updateTitle=window.onresize=function(){
-			var app_title=document.webL10n.get('appname').split();
+			var app_title=document.webL10n.get('appname').split('');
 			var persistent_title_div=document.getElementById("persistent_title_div");
 			html="";
 			for(var tidx=0;tidx<app_title.length;tidx++){
@@ -71,6 +71,7 @@ define([
 		filterpalette.addEventListener('filter', function() {
 			console.log(filterpalette.getFilter());
 			// USE: filterpalette.setFilter('europe'); TO CHANGE CURRENT SELECTION
+			colormyworld.change_areaCB(true,filterpalette.getFilter());
 			filterpalette.popDown();
 		});
 
@@ -89,12 +90,16 @@ define([
 				}
 //				$(".control_panel").toggleClass("show");
 		}
+
+		filterpalette.setFilter('Africa');
+		colormyworld.change_areaCB(true,'Africa');
+
 		$("#tb").click(function(e){
 			print("tb clicked");
 			$("#control_panel").toggleClass("hhide");
 		});
 
-
+/*
 		var layer_checkboxCB=function(e){
 			if(true)console.log(e.target.id);
 			var img=e.target;
@@ -126,6 +131,8 @@ define([
 				colormyworld.change_areaCB(false,layer_name);
 			}
 		}
+*/
+/*
 		var make_layer_row=function(category,layer_name){
 			if(true)console.log("make_layer_row: "+category+"."+layer_name);
 			var rdiv=document.createElement("div");
@@ -176,7 +183,8 @@ define([
 			rdiv.appendChild(rtab);
 			return rdiv;
 		}
-
+*/
+/*
 		$("#control_panel").append(util.make_hr("hr0"));
 		var category="Regions";
 		var opts={
@@ -201,6 +209,6 @@ define([
 		}
 		rollup.rollup.appendChild(lt);
 		$("#control_panel").append(util.make_hr("hr1"));
-
+*/
 	});
 });
