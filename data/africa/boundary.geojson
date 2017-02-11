@@ -2,7 +2,7 @@
 {
 	"type": "Feature",
 	"properties": {
-		"NAME": "africa",
+		"NAME": "Africa",
 		"AREA": 0,
 		"xmin":-25.36, "ymin":-46.97, "xmax": 63.50, "ymax": 37.54,
 		"POP2005": 867791038,

@@ -60,11 +60,13 @@ define([
 		runButton.onclick = function () {
 			colormyworld.toggleRunning();
 		}
+		colormyworld.setRGBColorString('rgb(0, 0, 255)');
 		var colorButton = document.getElementById("color-button");
 		var changeColorPalette = new colorpalette.ColorPalette(colorButton);
-		changeColorPalette.setColor('rgb(0, 0, 255)'); // Initial color
+		changeColorPalette.setColor(colormyworld.getRGBColorString()); // Initial color
 		changeColorPalette.addEventListener('colorChange', function(e) {
 			console.log(e.detail.color); // New color selected
+			colormyworld.setRGBColorString(e.detail.color);
 		});
 		var filterButton = document.getElementById("filter-button");
 		filterpalette = new filterpalette.FilterPalette(filterButton, undefined);
@@ -81,15 +83,15 @@ define([
 			console.log(modepalette.getMode());
 			if(modepalette.getMode()=="Tour"){
 				console.log("Mode: Tour");
-				colormyworld.setTour(true);
+				colormyworld.setMode(1);
 			}
 			else if(modepalette.getMode()=="Interactive"){
 				console.log("Mode: Interactive");
-				colormyworld.setTour(false);
+				colormyworld.setMode(2);
 			}
 			else if(modepalette.getMode()=="Coloring"){
 				console.log("Mode: Coloring");
-				colormyworld.setTour(false);
+				colormyworld.setMode(0);
 			}
 			else{
 				console.log("Mode: Unknown");
@@ -117,11 +119,12 @@ define([
 		filterpalette.setFilter('Africa');
 		modepalette.setMode('Tour');
 		colormyworld.change_areaCB(true,'Africa');
-
+/*
 		$("#tb").click(function(e){
 			print("tb clicked");
 			$("#control_panel").toggleClass("hhide");
 		});
+*/
 /*
 		var layer_checkboxCB=function(e){
 			if(true)console.log(e.target.id);

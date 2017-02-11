@@ -2,7 +2,7 @@
 {
 	"type": "Feature",
 	"properties": {
-		"NAME": "south_america",
+		"NAME": "South America",
 		"AREA": 0,
 		"xmin":-109.45, "ymin":-55.92, "xmax":-29.84, "ymax": 13.38,
 		"POP2005": 333227518,

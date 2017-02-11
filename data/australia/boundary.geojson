@@ -2,7 +2,7 @@
 {
 	"type": "Feature",
 	"properties": {
-		"NAME": "australia",
+		"NAME": "Australia Region",
 		"AREA": 0,
 		"xmin":105.63, "ymin":-54.75, "xmax":183.88, "ymax":-10.05,
 		"POP2005": 24641505,

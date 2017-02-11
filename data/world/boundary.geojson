@@ -2,7 +2,7 @@
 {
 	"type": "Feature",
 	"properties": {
-		"NAME": "world",
+		"NAME": "World",
 		"AREA": 0,
 		"xmin":-179, "ymin":-55.92, "xmax":179, "ymax": 55,
 		"POP2005": 6167752299,

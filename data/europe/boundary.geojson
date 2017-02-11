@@ -2,7 +2,7 @@
 {
 	"type": "Feature",
 	"properties": {
-		"NAME": "europe",
+		"NAME": "Europe",
 		"AREA": 0,
 		"xmin":-31.29, "ymin": 27.64, "xmax": 40.18, "ymax": 71.16,
 		"POP2005": 516108988,

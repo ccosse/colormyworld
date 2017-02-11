@@ -2,7 +2,7 @@
 {
 	"type": "Feature",
 	"properties": {
-		"NAME": "north_america",
+		"NAME": "North America",
 		"AREA": 0,
 		"xmin":-187.52, "ymin":  7.21, "xmax":-12.15, "ymax": 83.62,
 		"POP2005": 510153953,

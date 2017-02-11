@@ -2,7 +2,7 @@
 {
 	"type": "Feature",
 	"properties": {
-		"NAME": "asia",
+		"NAME": "Asia",
 		"AREA": 0,
 		"xmin": 19.63, "ymin":-11.64, "xmax":191.01, "ymax": 81.85,
 		"POP2005": 3915829297,
