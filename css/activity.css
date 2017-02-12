@@ -27,14 +27,62 @@
 #main-toolbar #mode-button {
   background-image: url(../activity/activity-icon.svg);
 }
-#coloring-button {
-	background-image:url(../activity/activity-icon.svg);
+#mode-button-prev {
+	cursor:pointer;
+	background-color: transparent;
+	background-image:url(../img/mode-arrow-lt.png);
+	background-size:20px;
+	width:52px;
+	height:52px;
+	margin:0px;
 }
-#tour-button {
-	background-image: url(../activity/activity-icon.svg);
+#mode-button-next {
+	cursor:pointer;
+	background-color: transparent;
+	background-image:url(../img/mode-arrow-lt.png);
+	background-size:20px;
+	transform:rotate(180deg);
+	width:52px;
+	height:52px;
+	margin:0px;
 }
-#interactive-button {
-	background-image: url(../activity/activity-icon.svg);
+#region-button-prev {
+	cursor:pointer;
+	background-color: transparent;
+	background-image:url(../img/mode-arrow-lt.png);
+	background-size:20px;
+	width:52px;
+	height:52px;
+	margin:0px;
+}
+#region-button-next {
+	cursor:pointer;
+	background-color: transparent;
+	background-image:url(../img/mode-arrow-lt.png);
+	background-size:20px;
+	transform:rotate(180deg);
+	width:52px;
+	height:52px;
+	margin:0px;
+}
+#language-button-prev {
+	cursor:pointer;
+	background-color: transparent;
+	background-image:url(../img/mode-arrow-lt.png);
+	background-size:20px;
+	width:52px;
+	height:52px;
+	margin:0px;
+}
+#language-button-next {
+	cursor:pointer;
+	background-color: transparent;
+	background-image:url(../img/mode-arrow-lt.png);
+	background-size:20px;
+	transform:rotate(180deg);
+	width:52px;
+	height:52px;
+	margin:0px;
 }
 
 
@@ -67,7 +115,7 @@
 }
 
 .palette-button {
-	width: 110px;
+	width: 70px;
 	height: 52px;
 	margin: 4px 22px;
 	color: transparent;
@@ -92,12 +140,12 @@
 	z-index:3;
 }
 @font-face {
-        font-family: 'Mickey';
-        src:url('../font/mickey.ttf') format('truetype');
+	font-family: 'Mickey';
+	src:url('../font/mickey.ttf') format('truetype');
 }
 #persistent_title_div{
-        position:absolute;
-        top:15px;
+	position:absolute;
+	top:15px;
 }
 #cmw_bg{
 	width:100%;
@@ -113,6 +161,28 @@
 	position:absolute;
 	text-align:center;
 }
+.modelabel{
+	width:100px;
+	color:white;
+	font-size:20pt;
+	text-align:center;
+	font-family:Pacifico;
+}
+.regionlabel{
+	width:100px;
+	color:white;
+	font-size:20pt;
+	text-align:center;
+	font-family:Pacifico;
+}
+.languagelabel{
+	width:100px;
+	color:white;
+	font-size:20pt;
+	text-align:center;
+	font-family:Pacifico;
+}
+
 .cpbutton{
 	background-image:url(../activity/activity-icon.svg);
 	width:47px;

@@ -24,7 +24,7 @@ define([
 		print(map.test());
 		map.setup_map();
 //		colormyworld.change_areaCB(1,INSTALLED['keys'][0]);
-		window.onresize=util.updateTitle;
+//		window.onresize=util.updateTitle;
 		print(document.webL10n.getLanguage());
 
 		var updateTitle=window.onresize=function(){
@@ -68,6 +68,7 @@ define([
 			console.log(e.detail.color); // New color selected
 			colormyworld.setRGBColorString(e.detail.color);
 		});
+/*
 		var filterButton = document.getElementById("filter-button");
 		filterpalette = new filterpalette.FilterPalette(filterButton, undefined);
 		filterpalette.addEventListener('filter', function() {
@@ -76,9 +77,10 @@ define([
 			colormyworld.change_areaCB(true,filterpalette.getFilter());
 			filterpalette.popDown();
 		});
-
+*/
 		var modeButton = document.getElementById("mode-button");
 		modepalette = new modepalette.ModePalette(modeButton, undefined);
+/*
 		modepalette.addEventListener('mode', function() {
 			console.log(modepalette.getMode());
 			if(modepalette.getMode()=="Tour"){
@@ -99,6 +101,7 @@ define([
 			// USE: modepalette.setMode('tour'); TO CHANGE CURRENT SELECTION
 			modepalette.popDown();
 		});
+*/
 /*
 		var modeButton = document.getElementById("select-mode-button");
 		var modeLabel = document.getElementById("select-mode-label");
@@ -116,8 +119,8 @@ define([
 //				$(".control_panel").toggleClass("show");
 		}
 */
-		filterpalette.setFilter('Africa');
-		modepalette.setMode('Tour');
+//		filterpalette.setFilter('Africa');
+//		modepalette.setMode('Tour');
 		colormyworld.change_areaCB(true,'Africa');
 /*
 		$("#tb").click(function(e){
