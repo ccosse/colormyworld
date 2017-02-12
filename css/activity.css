@@ -25,7 +25,7 @@
 	z-index: 20;
 }
 #main-toolbar #mode-button {
-  background-image: url(../activity/activity-icon.svg);
+  background-image: url(../icons/settings.svg);
 }
 #mode-button-prev {
 	cursor:pointer;
