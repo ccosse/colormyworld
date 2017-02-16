@@ -278,3 +278,20 @@
 .palette .colors tr:nth-last-child(1) button {
   margin-bottom: 5.5px;
 }
+.save-load-state-button {
+    background-color: #4C50AF;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius:12px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+
+}
+.save-load-state-button:hover {
+    background-color: #4CEF50;
+}

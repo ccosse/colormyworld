@@ -32,7 +32,7 @@ define([
 			var persistent_title_div=document.getElementById("persistent_title_div");
 			html="";
 			for(var tidx=0;tidx<app_title.length;tidx++){
-				var rand_color=util.mkBrightRGBA();
+				var rand_color=colormyworld.mkBrightRGBA();
 				html+="<span style='text-shadow:none;font-family:Mickey;color:"+rand_color+";'>"+app_title[tidx]+"</span>";
 			}
 			persistent_title_div.innerHTML=html;
@@ -60,12 +60,13 @@ define([
 		runButton.onclick = function () {
 			colormyworld.toggleRunning();
 		}
+
 		colormyworld.setRGBColorString('rgb(0, 0, 255)');
 		var colorButton = document.getElementById("color-button");
 		var changeColorPalette = new colorpalette.ColorPalette(colorButton);
 		changeColorPalette.setColor(colormyworld.getRGBColorString()); // Initial color
 		changeColorPalette.addEventListener('colorChange', function(e) {
-			console.log(e.detail.color); // New color selected
+			print(e.detail.color); // New color selected
 			colormyworld.setRGBColorString(e.detail.color);
 		});
 /*
