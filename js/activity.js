@@ -5,9 +5,9 @@ define([
 		"activity/ol",
 		"activity/hammer.min",
 		"l10n/l10n",
-		"config","colormyworld","map","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette"
+		"config","colormyworld","map","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette","modepalette"
 	],
-	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette,colorpalette,filterpalette){
+	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette,colorpalette,filterpalette,modepalette){
 
 	// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
@@ -24,15 +24,15 @@ define([
 		print(map.test());
 		map.setup_map();
 //		colormyworld.change_areaCB(1,INSTALLED['keys'][0]);
-		window.onresize=util.updateTitle;
+//		window.onresize=util.updateTitle;
 		print(document.webL10n.getLanguage());
 
 		var updateTitle=window.onresize=function(){
-			var app_title=document.webL10n.get('appname').split();
+			var app_title=document.webL10n.get('appname').split('');
 			var persistent_title_div=document.getElementById("persistent_title_div");
 			html="";
 			for(var tidx=0;tidx<app_title.length;tidx++){
-				var rand_color=util.mkBrightRGBA();
+				var rand_color=colormyworld.mkBrightRGBA();
 				html+="<span style='text-shadow:none;font-family:Mickey;color:"+rand_color+";'>"+app_title[tidx]+"</span>";
 			}
 			persistent_title_div.innerHTML=html;
@@ -60,20 +60,50 @@ define([
 		runButton.onclick = function () {
 			colormyworld.toggleRunning();
 		}
+
+		colormyworld.setRGBColorString('rgb(0, 0, 255)');
 		var colorButton = document.getElementById("color-button");
 		var changeColorPalette = new colorpalette.ColorPalette(colorButton);
-		changeColorPalette.setColor('rgb(0, 0, 255)'); // Initial color
+		changeColorPalette.setColor(colormyworld.getRGBColorString()); // Initial color
 		changeColorPalette.addEventListener('colorChange', function(e) {
-			console.log(e.detail.color); // New color selected
+			print(e.detail.color); // New color selected
+			colormyworld.setRGBColorString(e.detail.color);
 		});
+/*
 		var filterButton = document.getElementById("filter-button");
 		filterpalette = new filterpalette.FilterPalette(filterButton, undefined);
 		filterpalette.addEventListener('filter', function() {
 			console.log(filterpalette.getFilter());
 			// USE: filterpalette.setFilter('europe'); TO CHANGE CURRENT SELECTION
+			colormyworld.change_areaCB(true,filterpalette.getFilter());
 			filterpalette.popDown();
 		});
-
+*/
+		var modeButton = document.getElementById("mode-button");
+		modepalette = new modepalette.ModePalette(modeButton, undefined);
+/*
+		modepalette.addEventListener('mode', function() {
+			console.log(modepalette.getMode());
+			if(modepalette.getMode()=="Tour"){
+				console.log("Mode: Tour");
+				colormyworld.setMode(1);
+			}
+			else if(modepalette.getMode()=="Interactive"){
+				console.log("Mode: Interactive");
+				colormyworld.setMode(2);
+			}
+			else if(modepalette.getMode()=="Coloring"){
+				console.log("Mode: Coloring");
+				colormyworld.setMode(0);
+			}
+			else{
+				console.log("Mode: Unknown");
+			}
+			// USE: modepalette.setMode('tour'); TO CHANGE CURRENT SELECTION
+			modepalette.popDown();
+		});
+*/
+/*
 		var modeButton = document.getElementById("select-mode-button");
 		var modeLabel = document.getElementById("select-mode-label");
 		modeButton.onclick = function () {
@@ -89,12 +119,17 @@ define([
 				}
 //				$(".control_panel").toggleClass("show");
 		}
+*/
+//		filterpalette.setFilter('Africa');
+//		modepalette.setMode('Tour');
+		colormyworld.change_areaCB(true,'Africa');
+/*
 		$("#tb").click(function(e){
 			print("tb clicked");
 			$("#control_panel").toggleClass("hhide");
 		});
-
-
+*/
+/*
 		var layer_checkboxCB=function(e){
 			if(true)console.log(e.target.id);
 			var img=e.target;
@@ -126,6 +161,8 @@ define([
 				colormyworld.change_areaCB(false,layer_name);
 			}
 		}
+*/
+/*
 		var make_layer_row=function(category,layer_name){
 			if(true)console.log("make_layer_row: "+category+"."+layer_name);
 			var rdiv=document.createElement("div");
@@ -176,7 +213,8 @@ define([
 			rdiv.appendChild(rtab);
 			return rdiv;
 		}
-
+*/
+/*
 		$("#control_panel").append(util.make_hr("hr0"));
 		var category="Regions";
 		var opts={
@@ -201,6 +239,6 @@ define([
 		}
 		rollup.rollup.appendChild(lt);
 		$("#control_panel").append(util.make_hr("hr1"));
-
+*/
 	});
 });

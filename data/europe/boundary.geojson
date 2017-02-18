@@ -2,7 +2,7 @@
 {
 	"type": "Feature",
 	"properties": {
-		"NAME": "Europe", 
+		"NAME": "Europe",
 		"AREA": 0,
 		"xmin":-31.29, "ymin": 27.64, "xmax": 40.18, "ymax": 71.16,
 		"POP2005": 516108988,
@@ -15,3 +15,4 @@
 	"type": "Feature",
 	"geometry": {"type": "MultiPolygon", "coordinates": [[[[-31.29, 27.64],[-31.29, 71.16],[ 40.18, 71.16],[ 40.18, 27.64],[-31.29, 27.64]]]]}
 }
+	
