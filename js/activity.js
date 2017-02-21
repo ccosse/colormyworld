@@ -61,7 +61,7 @@ define([
 			colormyworld.toggleRunning();
 		}
 
-		colormyworld.setRGBColorString('rgb(0, 0, 255)');
+		colormyworld.setRGBColorString('rgb(255, 0, 0)');
 		var colorButton = document.getElementById("color-button");
 		var changeColorPalette = new colorpalette.ColorPalette(colorButton);
 		changeColorPalette.setColor(colormyworld.getRGBColorString()); // Initial color
