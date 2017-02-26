@@ -25,7 +25,7 @@
 	z-index: 20;
 }
 #main-toolbar #mode-button {
-  background-image: url(../activity/activity-icon.svg);
+  background-image: url(../icons/settings.svg);
 }
 #mode-button-prev {
 	cursor:pointer;
@@ -150,7 +150,7 @@
 #cmw_bg{
 	width:100%;
 	height:100%;
-	background-color:rgba(150,150,150,.3);
+	background-color:#00A0FF;
 	z-index:0;
 }
 #popup{
@@ -277,4 +277,21 @@
 }
 .palette .colors tr:nth-last-child(1) button {
   margin-bottom: 5.5px;
+}
+.save-load-state-button {
+    background-color: #4C50AF;
+    border: none;
+    color: white;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius:12px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+     transition-duration: 0.4s;
+
+}
+.save-load-state-button:hover {
+    background-color: #4CEF50;
 }

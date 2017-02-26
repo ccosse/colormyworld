@@ -27,12 +27,39 @@ define([
 //		window.onresize=util.updateTitle;
 		print(document.webL10n.getLanguage());
 
+		var stopButton = document.getElementById("stop-button");
+		stopButton.addEventListener('click', function (event) {
+			console.log("writing...");
+			var datastoreObject = activity.getDatastoreObject();
+			var jsonData = colormyworld.saveStateCB();
+			datastoreObject.setDataAsText(jsonData);
+			datastoreObject.save(function (error) {
+				if (error === null) {
+					console.log("write done.");
+				}
+				else {
+					console.log("write failed.");
+				}
+			});
+		});
+
 		var updateTitle=window.onresize=function(){
-			var app_title=document.webL10n.get('appname').split('');
+			activity.getDatastoreObject().getMetadata(function(error,metadata){
+				var d = new Date().getTime();
+				if (Math.abs(d-metadata.creation_time)>=2000){
+					var datastoreObject = activity.getDatastoreObject();
+					datastoreObject.loadAsText(function (error, metadata, data) {
+						colormyworld.loadStateCB(data);
+					});
+				}
+			});
+			var app_name=document.webL10n.get('appname');
+			if (app_name == "{{appname}}") app_name = '';
+			var app_title=app_name.split('');
 			var persistent_title_div=document.getElementById("persistent_title_div");
 			html="";
 			for(var tidx=0;tidx<app_title.length;tidx++){
-				var rand_color=util.mkBrightRGBA();
+				var rand_color=colormyworld.mkBrightRGBA();
 				html+="<span style='text-shadow:none;font-family:Mickey;color:"+rand_color+";'>"+app_title[tidx]+"</span>";
 			}
 			persistent_title_div.innerHTML=html;
@@ -60,12 +87,13 @@ define([
 		runButton.onclick = function () {
 			colormyworld.toggleRunning();
 		}
-		colormyworld.setRGBColorString('rgb(0, 0, 255)');
+
+		colormyworld.setRGBColorString('rgb(255, 0, 0)');
 		var colorButton = document.getElementById("color-button");
 		var changeColorPalette = new colorpalette.ColorPalette(colorButton);
 		changeColorPalette.setColor(colormyworld.getRGBColorString()); // Initial color
 		changeColorPalette.addEventListener('colorChange', function(e) {
-			console.log(e.detail.color); // New color selected
+			print(e.detail.color); // New color selected
 			colormyworld.setRGBColorString(e.detail.color);
 		});
 /*
