@@ -82,6 +82,6 @@ define([
 
 		var modeButton = document.getElementById("mode-button");
 		modepalette = new modepalette.ModePalette(modeButton, undefined);
-		colormyworld.change_areaCB(true,'World');
+		colormyworld.change_areaCB(true,'Africa');
 	});
 });
