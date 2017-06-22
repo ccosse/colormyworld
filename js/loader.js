@@ -16,12 +16,15 @@ requirejs(["activity/activity"]);
 requirejs(["l10n/l10n","sugar-web/env","sugar-web/datastore"], function(l10n, env, datastore) {
 	l10n_s = document.webL10n; //global declaration of translate interface
 
-	datastore.localStorage.load(function() {
-		getSettings(function(settings) { //globally setting language from sugar settings
-			l10n_s.setLanguage(settings.language);
-			console.log(">>"+settings.language);
+	try{
+		datastore.localStorage.load(function() {
+			getSettings(function(settings) { //globally setting language from sugar settings
+				l10n_s.setLanguage(settings.language);
+				console.log(">>"+settings.language);
+			});
 		});
-	});
+	}
+	catch(e){;}//fails when run standalone outside Sugarizer
 
    function getSettings(callback) {
 		var defaultSettings = {
