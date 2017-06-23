@@ -4,6 +4,8 @@ Geography Scavenger Hunt by <a href="http://github.com/ccosse/">Charles Cosse</a
 
 Introducing Color Profiles ... (this is a green profile)
 <img src='img/colormyworld-v0.4.png'/>
+<img src='img/colormyworld-v0.4b.png'/>
+<img src='img/colormyworld-v0.4c.png'/>
 
 This is the old way, with carefully (manually) selected colors.  The random
 coloration led to some ugly results ... almost always.  Color profiles can
