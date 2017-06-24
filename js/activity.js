@@ -5,17 +5,17 @@ define([
 		"activity/ol",
 		"activity/hammer.min",
 		"l10n/l10n",
-		"config","colormyworld","map","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette","modepalette"
+		"config","colormyworld","map","colorcfg","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette","modepalette","d3.v4.min"
 	],
-	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,rollupdiv,util,languagepalette,colorpalette,filterpalette,modepalette){
+	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,colorcfg,rollupdiv,util,languagepalette,colorpalette,filterpalette,modepalette,d3){
 
 	// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
 
 		// Initialize the activity.
 		activity.setup();
-		print(colormyworld.test());
-		print(map.test());
+//		print(colormyworld.test());
+//		print(map.test());
 		map.setup_map();
 //		colormyworld.change_areaCB(1,INSTALLED['keys'][0]);
 //		window.onresize=util.updateTitle;
@@ -83,5 +83,9 @@ define([
 		var modeButton = document.getElementById("mode-button");
 		modepalette = new modepalette.ModePalette(modeButton, undefined);
 		colormyworld.change_areaCB(true,'Africa');
+
+		var colorCfgButton = document.getElementById("color-config");
+		colorCfgButton.onclick=function(){colorcfg.show()}
+
 	});
 });

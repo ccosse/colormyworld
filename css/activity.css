@@ -1,5 +1,6 @@
 #main-toolbar #activity-button {
   background-image: url(../activity/activity-icon.svg);
+	background-color:#DC0;
 	z-index:5;
 }
 .toolbar{
@@ -24,8 +25,9 @@
 .modepalette {
 	z-index: 20;
 }
-#main-toolbar #mode-button {
+#main-toolbar #mode-button{
   background-image: url(../icons/settings.svg);
+	background-color:maroon;
 }
 #mode-button-prev {
 	cursor:pointer;
