@@ -33,9 +33,8 @@ the GIS division at [GGMC Guyana](http://www.ggmc.gov.gy/),
 Originally developed for GIS Day 2015, Georgetown Guyana, while I was serving as
 a GIS Web Applications Developer with [Peace Corps Response](https://www.peacecorps.gov/volunteer/is-peace-corps-right-for-me/peace-corps-response/).
 Subsequent improvements were made during an 8 week course taught at [GGMC, Guyana](http://www.ggmc.gov.gy/).
-Another round of improvements came in late 2016 while living in stimulating [Portland OR](https://www.meetup.com/cities/us/or/portland/tech/), and integrating it with the [NetDispenser](https://netdispenser.github.io/).
-In 2017 I ported it to [Sugarizer](http://sugarizer.org/) with help from Lionel Laské as part of the [same experiment](https://netdispenser.github.io/).
-[ColorMyWorld](https://github.com/ccosse/colormyworld) was a featured activity in our demo at [PyCon2017](https://flic.kr/y/2GSVF7K).
+Another round of improvements came in late 2016 while living in stimulating [Portland OR](https://www.meetup.com/cities/us/or/portland/tech/), and integrating it with the [NetDispenser](https://netdispenser.github.io/). In 2017 I ported it to [Sugarizer](http://sugarizer.org/) with help from Lionel Laské as part of the [same experiment](https://netdispenser.github.io/). [ColorMyWorld](https://github.com/ccosse/colormyworld) was a featured activity in
+[our demo](https://us.pycon.org/2017/schedule/presentation/643/) at [PyCon2017](https://flic.kr/y/2GSVF7K).
 In June 2017 I developed [this prototype color-sequence tool](https://github.com/ccosse/colorcfg), in-part to address the ugly random colorization during Tour mode.
 
 ## More Credits
