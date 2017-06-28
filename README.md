@@ -15,13 +15,13 @@ before clicking on map countries to apply the color.
 <img src='img/colormyworld-v0.3.png'/>
 
 
-##Author:
+## Author:
 <a href="http://github.com/ccosse/">Charles Cossé</a>
 
-##History:
+## History:
 Originally developed for GIS Day 2015, Georgetown Guyana.  
 
-###Icons credits:
+### Icons credits:
 * Earth by Peter van Driel from the Noun Project
 * World Map by Marvdrock from the Noun Project
 * North America by Marvdrock from the Noun Project
