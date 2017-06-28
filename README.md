@@ -6,13 +6,16 @@ Random colors [were ugly](img/ugly_random_colors.png)!  Now only colors from
 your enabled sequences are randomly applied, with the results below.  Note that
 this only affects Tour and Interactive modes.  Coloring mode still uses the
 originl color chooser.  The new color-sequence tool is just one implementation
-of [this new project](https://github.com/ccosse/colorcfg).
+of [this new project](https://github.com/ccosse/colorcfg). The resulting images
+look like [choropleth maps](https://en.wikipedia.org/wiki/Choropleth_map) but in
+this case the colorization is merely for aesthetics.
 <img src='img/colorcfg-062717d.png'/>
 <img src='img/colorcfg-062717e.png'/>
 
 <hr>
-This was done in "Coloring" mode, where the user sets each individual color
-before clicking on map countries to apply the color.
+This was done in Coloring mode, where the user sets each individual color
+before clicking on map countries to apply the color.  Coloring mode did not
+change.
 <img src='img/colormyworld-v0.3.png'/>
 
 
@@ -25,10 +28,11 @@ Donald Singh and [GGMC Guyana](http://www.ggmc.gov.gy/),
 
 ## History:
 Originally developed for GIS Day 2015, Georgetown Guyana, while I was serving as
-a GIS Web Applications Developer with [Peace Corps Response](https://www.peacecorps.gov/volunteer/is-peace-corps-right-for-me/peace-corps-response/).  
+a GIS Web Applications Developer with [Peace Corps Response](https://www.peacecorps.gov/volunteer/is-peace-corps-right-for-me/peace-corps-response/).
 Subsequent improvements were made during an 8 week course taught at [GGMC, Guyana](http://www.ggmc.gov.gy/).
 Another round of improvements came in late 2016 while living in Stimulating Portland, Oregon, and integrating it with the [NetDispenser](https://netdispenser.github.io/).
-In 2017 I ported it to Sugarizer with help from Lionel Laské.  
+In 2017 I ported it to Sugarizer with help from Lionel Laské as part of the [same experiment](https://netdispenser.github.io/).
+In June 2017 I developed this prototype color-sequence tool, in-part to address the ugly random colorization during Tour mode.
 
 ### Icons credits:
 * Earth by Peter van Driel from the Noun Project
