@@ -5,9 +5,9 @@ define([
 		"activity/ol",
 		"activity/hammer.min",
 		"l10n/l10n",
-		"config","colormyworld","map","colorcfg","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette","modepalette","d3.v4.min"
+		"config","colormyworld","map","colorcfg","colorcfg_data","roll_up_div","util","languagepalette","sugar-web/graphics/colorpalette","filterpalette","modepalette","d3.v4.min"
 	],
-	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,colorcfg,rollupdiv,util,languagepalette,colorpalette,filterpalette,modepalette,d3){
+	function (activity,messages,print,jquery,ol,hammer,l10n,config,colormyworld,map,colorcfg,colorcfg_data,rollupdiv,util,languagepalette,colorpalette,filterpalette,modepalette,d3){
 
 	// Manipulate the DOM only when it is ready.
 	require(['domReady!'], function (doc) {
@@ -85,7 +85,7 @@ define([
 		colormyworld.change_areaCB(true,'Africa');
 
 		var colorCfgButton = document.getElementById("color-config");
-		colorCfgButton.onclick=function(){colorcfg.show()}
+		colorCfgButton.onclick=function(){colorcfg.show(colormyworld.update_styles)}
 
 	});
 });

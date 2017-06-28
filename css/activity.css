@@ -6,6 +6,10 @@
 .toolbar{
 	z-index:5;
 }
+#color-config{
+	background-color: steelblue;
+	background-image: url(../icons/settings.svg);
+}
 #select-language-button {
 	background-image: url(../activity/activity-icon.svg);
 }

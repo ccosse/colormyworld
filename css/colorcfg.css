@@ -1,10 +1,4 @@
-#main-toolbar  #color-config{
-  background-image: url(../icons/settings.svg);
-}
-#color-config{
-	background-color:steelblue;
-}
-#exitB {
+#doneB {
   display: block;
   position: fixed;
   bottom: 40px;
@@ -18,6 +12,93 @@
   padding: 15px;
   border-radius: 10px;
 }
-#exitB:hover {
+#doneB:hover {
   background-color: #DC0;
+}
+.floatleft{float:left;}
+.ccbutton {
+    padding: 0.3rem 0.5rem;
+    margin-right: 0.4rem;
+
+    background: #808080;
+    border: 1px solid #B7BEF0;
+    border-radius: 3px;
+
+    cursor: pointer;
+    transition: background 40ms;
+}
+.ccbutton:hover {
+    background: #D5DEF0;
+}
+.ccbutton:active {
+    background: #C1D6EE;
+}
+.ccbutton:focus {
+    outline: none;
+    border-color: #3C50DF;
+}
+.rgb_cycle{width:100px;height:100px;border-radius:50px;left:10px;position:relative;}
+rect {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+.column {
+/*    float: left;*/
+    width: 100%;
+		max-width:800px;
+    margin-bottom: 0px;
+    padding: 10px 10px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+/*
+@media (max-width: 3200px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+*/
+/* Add some shadows to create a card effect */
+.card {
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+#column1{display:none;}
+/* Some left and right padding inside the container */
+.container {
+    padding: 16px 16px;
+		overflow:scroll;
+}
+#colorcfg_main{background-color: white}
+.colorcfg_widget {
+	width:400px;
+	height:200px;
+	color:white;
+	text-align:center;
+}
+.cp_table {width:100%;}
+.widget_svg {
+	background-color:#AAA;
+	width:100%;
+	height:150px;
+}
+.swatch_svg{
+	width:100%;
+	height:400px;
+	background-color:#888;
 }

@@ -2,18 +2,23 @@
 Geography Scavenger Hunt by <a href="http://github.com/ccosse/">Charles Cosse</a>
 [Available Online](http://dev.asymptopia.org/static/colormyworld)
 
-Introducing Color Profiles ... (this is a green profile)
+Introducing Color Profiles
+<img src='img/colorcfg-062717d.png'/>
+<img src='img/colorcfg-062717e.png'/>
+
+<hr>
 <img src='img/colormyworld-v0.4.png'/>
 <img src='img/colormyworld-v0.4b.png'/>
 <img src='img/colormyworld-v0.4c.png'/>
 
+<hr>
 This is the old way, with carefully (manually) selected colors.  The random
 coloration led to some ugly results ... almost always.  Color profiles can
 restrict the palette to only your favorite colors now.  Or soon ...
 <img src='img/colormyworld-v0.3.png'/>
 
 
-Icons credits:
+##Icons credits:
 
 * Earth by Peter van Driel from the Noun Project
 * World Map by Marvdrock from the Noun Project
