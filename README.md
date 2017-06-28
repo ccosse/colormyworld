@@ -30,8 +30,8 @@ the GIS division at [GGMC Guyana](http://www.ggmc.gov.gy/),
 [Lionel Laské](https://github.com/llaske), and others.
 
 ## History:
-Originally developed for GIS Day 2015, Georgetown Guyana, while I was serving as
-a GIS Web Applications Developer with [Peace Corps Response](https://www.peacecorps.gov/volunteer/is-peace-corps-right-for-me/peace-corps-response/).
+Originally developed for [GIS Day 2015](https://www.facebook.com/search/top/?q=GIS%20Day%20colormyworld), Georgetown Guyana, while I was serving as
+a GIS Web Applications Developer at [MNRE](https://www.nre.gov.gy/) via [Peace Corps Response](https://www.peacecorps.gov/volunteer/is-peace-corps-right-for-me/peace-corps-response/).
 Subsequent improvements were made during an 8 week course taught at [GGMC, Guyana](http://www.ggmc.gov.gy/).
 Another round of improvements came in late 2016 while living in stimulating [Portland OR](https://www.meetup.com/cities/us/or/portland/tech/), and integrating it with the [NetDispenser](https://netdispenser.github.io/). In 2017 I ported it to [Sugarizer](http://sugarizer.org/) with help from Lionel Laské as part of the [same experiment](https://netdispenser.github.io/). [ColorMyWorld](https://github.com/ccosse/colormyworld) was a featured activity in
 [our demo](https://us.pycon.org/2017/schedule/presentation/643/) at [PyCon2017](https://flic.kr/y/2GSVF7K).
@@ -42,7 +42,8 @@ The backbone and heart of this application is the [Open Layers](http://openlayer
 The new color-sequence tool uses [D3.js](http://d3js.org).  D3js can draw maps, too ... [fancy maps](https://www.jasondavies.com/maps/)!
 So I'm looking at phasing-out Open Layers, JQuery and Bootstrap and using D3 exclusively, forever.
 Even though it's not specifically used in ColorMyWorld, [Python](http://python.org) and [Django](https://www.djangoproject.com/) have
-been important parts of my GIS experience.  I also learned a lot working on [GeoNode](http://geonode.org/).
+been important parts of my GIS experience.  I also learned a lot working on [GeoNode](http://geonode.org/)
+and while developing this [Custom GIS CMS](http://dev.asymptopia.org/pacmap/).
 
 ### Icons credits:
 * Earth by Peter van Driel from the Noun Project
