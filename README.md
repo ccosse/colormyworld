@@ -1,5 +1,5 @@
 # ColorMyWorld
-Geography Scavenger Hunt [Online](http://dev.asymptopia.org/static/colormyworld)
+Geography Scavenger Hunt [Play Online](http://dev.asymptopia.org/static/colormyworld)
 
 Introducing Color Profiles.  Previously, the Tour mode applied random colors.
 Random colors [were ugly](img/ugly_random_colors.png)!  Now only colors from
@@ -16,15 +16,15 @@ represent any data.
 
 <br>
 <hr>
-This was done in Coloring mode, where the user sets each individual color
-before clicking on map countries to apply the color.  Coloring mode did not
-change.
+In Coloring mode the user sets each individual color before clicking on map
+countries to apply the color.
 <img src='img/colormyworld-v0.3.png'/>
 
 
 ## Author:
-<a href="http://github.com/ccosse/">Charles Cossé</a>
-with help from many people, including Phillip Gajadhar,
+[Charles Cossé](http://github.com/ccosse/) | [Asymptopia Software](http://www.asymptopia.org)
+
+Along the way help came from many people, including Phillip Gajadhar,
 everyone at [GIMU Guyana](http://data.gim.gov.gy),
 the GIS division at [GGMC Guyana](http://www.ggmc.gov.gy/),
 [Lionel Laské](https://github.com/llaske), and others.
@@ -33,14 +33,17 @@ the GIS division at [GGMC Guyana](http://www.ggmc.gov.gy/),
 Originally developed for GIS Day 2015, Georgetown Guyana, while I was serving as
 a GIS Web Applications Developer with [Peace Corps Response](https://www.peacecorps.gov/volunteer/is-peace-corps-right-for-me/peace-corps-response/).
 Subsequent improvements were made during an 8 week course taught at [GGMC, Guyana](http://www.ggmc.gov.gy/).
-Another round of improvements came in late 2016 while living in Stimulating Portland, Oregon, and integrating it with the [NetDispenser](https://netdispenser.github.io/).
-In 2017 I ported it to Sugarizer with help from Lionel Laské as part of the [same experiment](https://netdispenser.github.io/).
-In June 2017 I developed this prototype color-sequence tool, in-part to address the ugly random colorization during Tour mode.
+Another round of improvements came in late 2016 while living in stimulating [Portland OR](https://www.meetup.com/cities/us/or/portland/tech/), and integrating it with the [NetDispenser](https://netdispenser.github.io/).
+In 2017 I ported it to [Sugarizer](http://sugarizer.org/) with help from Lionel Laské as part of the [same experiment](https://netdispenser.github.io/).
+[ColorMyWorld](https://github.com/ccosse/colormyworld) was a featured activity in our demo at [PyCon2017](https://flic.kr/y/2GSVF7K).
+In June 2017 I developed [this prototype color-sequence tool](https://github.com/ccosse/colorcfg), in-part to address the ugly random colorization during Tour mode.
 
 ## More Credits
 The backbone and heart of this application is the [Open Layers](http://openlayers.org/) library.
 The new color-sequence tool uses [D3.js](http://d3js.org).  D3js can draw maps, too ... [fancy maps](https://www.jasondavies.com/maps/)!
-So I'm looking at phasing-out Open Layers and using D3 exclusively.  
+So I'm looking at phasing-out Open Layers, JQuery and Bootstrap and using D3 exclusively, forever.
+Even though it's not specifically used in ColorMyWorld, [Python](http://python.org) and [Django](https://www.djangoproject.com/) have
+been important parts of my GIS experience.  I also learned a lot working on [GeoNode](http://geonode.org/).
 
 ### Icons credits:
 * Earth by Peter van Driel from the Noun Project
