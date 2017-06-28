@@ -103,3 +103,13 @@ rect {
 	height:400px;
 	background-color:#888;
 }
+.vslide{width:400px;position:fixed;left:-200px;margin:-50px 0px;}
+.hslide{margin:10px 0px;}
+.colorcfg_wrapper {
+	width:1px;
+}
+.vslide_cell {width:50px;}
+.rotate {
+	 transform: rotate(90deg) translateX(-100%);
+	 /*position: absolute;    */
+}
