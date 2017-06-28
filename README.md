@@ -16,21 +16,21 @@ before clicking on map countries to apply the color.
 <img src='img/colormyworld-v0.3.png'/>
 
 
-##Author:
+## Author:
 <a href="http://github.com/ccosse/">Charles Cossé</a>
 with help from many people, including Phillip Ghajadar ([GIMU Guyana](http://data.gim.gov.gy)),
 Donald Singh and [GGMC Guyana](http://www.ggmc.gov.gy/),
 [Lionel Laské](https://github.com/llaske)([Sugarizer](http://sugarizer.org/),
 [OLPC-Fr](https://olpc-france.org/wiki/index.php?title=Accueil)), and others
 
-##History:
+## History:
 Originally developed for GIS Day 2015, Georgetown Guyana, while I was serving as
 a GIS Web Applications Developer with [Peace Corps Response](https://www.peacecorps.gov/volunteer/is-peace-corps-right-for-me/peace-corps-response/).  
 Subsequent improvements were made during an 8 week course taught at [GGMC, Guyana](http://www.ggmc.gov.gy/).
 Another round of improvements came in late 2016 while living in Stimulating Portland, Oregon, and integrating it with the [NetDispenser](https://netdispenser.github.io/).
 In 2017 I ported it to Sugarizer with help from Lionel Laské.  
 
-###Icons credits:
+### Icons credits:
 * Earth by Peter van Driel from the Noun Project
 * World Map by Marvdrock from the Noun Project
 * North America by Marvdrock from the Noun Project
