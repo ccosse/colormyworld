@@ -90,6 +90,7 @@ rect {
 	height:200px;
 	color:white;
 	text-align:center;
+	overflow:scroll;
 }
 .cp_table {width:100%;}
 .widget_svg {
