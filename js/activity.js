@@ -82,7 +82,7 @@ define([
 
 		var modeButton = document.getElementById("mode-button");
 		modepalette = new modepalette.ModePalette(modeButton, undefined);
-		colormyworld.change_areaCB(true,'Africa');
+		colormyworld.change_areaCB(true,'World');
 
 		var colorCfgButton = document.getElementById("color-config");
 		colorCfgButton.onclick=function(){colorcfg.show(colormyworld.update_styles)}
