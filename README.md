@@ -6,7 +6,7 @@ Random colors [were ugly](img/ugly_random_colors.png)!  Now only colors from
 your enabled sequences are randomly applied, with the results below.  Note that
 this only affects Tour and Interactive modes.  Coloring mode still uses the
 originl color chooser.  The new color-sequence tool is just one implementation
-of [this new project](https://github.com/ccosse/colorcfg). The resulting images
+of [this new project](https://github.com/cdbrissac/colorcfg). The resulting images
 look like [choropleth maps](https://en.wikipedia.org/wiki/Choropleth_map) but in
 this case the colorization is applied randomly for aesthetics and does not
 represent any data.
@@ -22,7 +22,7 @@ countries to apply the color.
 
 
 ## Author:
-[Charles Cossé](http://github.com/ccosse/) | [Asymptopia Software](http://www.asymptopia.org)
+[Charles Brissac](http://github.com/cdbrissac/)
 
 Along the way help came from many people, including Phillip Gajadhar,
 everyone at [GIMU Guyana](http://data.gim.gov.gy),
@@ -31,11 +31,11 @@ the GIS division at [GGMC Guyana](http://www.ggmc.gov.gy/),
 
 ## History:
 Originally developed for [GIS Day 2015](https://www.facebook.com/search/top/?q=GIS%20Day%20colormyworld), Georgetown Guyana, while I was serving as
-a GIS Web Applications Developer at [MNRE](https://www.nre.gov.gy/) via [Peace Corps Response](https://www.peacecorps.gov/volunteer/is-peace-corps-right-for-me/peace-corps-response/).
+a GIS Web Applications Developer at [MNRE](https://www.nre.gov.gy/).
 Subsequent improvements were made during an 8 week course taught at [GGMC, Guyana](http://www.ggmc.gov.gy/).
 Another round of improvements came in late 2016 while living in stimulating [Portland OR](https://www.meetup.com/cities/us/or/portland/tech/), and integrating it with the [NetDispenser](https://netdispenser.github.io/). In 2017 I ported it to [Sugarizer](http://sugarizer.org/) with help from Lionel Laské as part of the [same experiment](https://netdispenser.github.io/). [ColorMyWorld](https://github.com/ccosse/colormyworld) was a featured activity in
 [our demo](https://us.pycon.org/2017/schedule/presentation/643/) at [PyCon2017](https://flic.kr/y/2GSVF7K).
-In June 2017 I developed [this prototype color-sequence tool](https://github.com/ccosse/colorcfg), in-part to address the ugly random colorization during Tour mode.
+In June 2017 I developed [this prototype color-sequence tool](https://github.com/cdbrissac/colorcfg), in-part to address the ugly random colorization during Tour mode.
 
 ## More Credits
 The backbone and heart of this application is the [Open Layers](http://openlayers.org/) library.
