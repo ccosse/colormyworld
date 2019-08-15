@@ -22,7 +22,7 @@ countries to apply the color.
 
 
 ## Author:
-[Charles Brissac](http://github.com/cdbrissac/)
+[Charlie Cosse](http://github.com/ccosse/)
 
 Along the way help came from many people, including Phillip Gajadhar,
 everyone at [GIMU Guyana](http://data.gim.gov.gy),
