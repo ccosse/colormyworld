@@ -1,5 +1,5 @@
 # ColorMyWorld
-Geography Scavenger Hunt [Play Online](http://dev.asymptopia.org/static/colormyworld)
+Geography Scavenger Hunt [Play Online](https://ccosse.github.io/colormyworld/)
 
 Introducing Color Profiles.  Previously, the Tour mode applied random colors.
 Random colors [were ugly](img/ugly_random_colors.png)!  Now only colors from
